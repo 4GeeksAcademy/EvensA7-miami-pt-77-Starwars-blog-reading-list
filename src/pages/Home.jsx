@@ -1,16 +1,29 @@
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import { useState, useEffect } from "react";
 
 export const Home = () => {
 
-  const {store, dispatch} =useGlobalReducer()
+	const [characters, setCharacters] = useState();
+	const { store, dispatch, getCharacters } = useGlobalReducer()
 
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
+	useEffect(() => {
+		getCharacters()
+	}, [])
+
+	useEffect(() => {
+		setCharacters(store.characters)
+	}, [store.characters])
+	
+	)
+console.log(characters)
+return (
+	<div className="text-center mt-5">
+		<h2>Characters</h2>
+		<div>
+			{characters?.map((character, index) => {
+				return <CharacterCard key={character.uid} name={character.name} />
+			})}
 		</div>
-	);
+	</div>
+);
 }; 
