@@ -11,7 +11,7 @@ export const Navbar = () => {
 	useEffect(()=>{
         setFavorites(store.favorites)
     },[store.favorites])
-
+	// console.log(store.favorites)
 
 	return (
 		<nav className="navbar navbar-light bg-light">
@@ -20,11 +20,11 @@ export const Navbar = () => {
 					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
 				</Link>
 				<div className="ml-auto">
-					<div class="dropdown">
-						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<div className="dropdown">
+						<button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Favorites
 						</button>
-						<ul class="dropdown-menu">
+						<ul className="dropdown-menu">
 							{favorites.map((item,index)=>{
 								return <li key={index}>{item}</li>
 							})}

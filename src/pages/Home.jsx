@@ -8,6 +8,8 @@ export const Home = () => {
 	const [characters, setCharacters] = useState();
 	const [planets, setPlanets] = useState();
 	const { store, dispatch } = useGlobalReducer();
+	
+	// console.log(store.favorites);
 
 	useEffect(() => {
 		// if (store.characters.length == 0) {
@@ -26,6 +28,7 @@ export const Home = () => {
 		setPlanets(store.planets)
 	}, [store.planets])
 
+	
 
 	return (
 		<div className="text-center mt-3">
