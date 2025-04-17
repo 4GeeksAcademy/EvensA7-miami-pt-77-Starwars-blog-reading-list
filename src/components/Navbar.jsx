@@ -17,11 +17,11 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light">
 			<div className="container">
 				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+					<span className="navbar-brand mb-0 h1">STAR WARS 🚀</span>
 				</Link>
 				<div className="ml-auto">
 					<div className="dropdown">
-						<button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<button className="btn btn-warning text-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Favorites
 						</button>
 						<ul className="dropdown-menu">

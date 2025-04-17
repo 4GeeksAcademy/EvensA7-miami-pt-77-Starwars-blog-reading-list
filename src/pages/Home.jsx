@@ -39,21 +39,21 @@ export const Home = () => {
 			<h2>Characters</h2>
 			<div className="d-flex col-10 overflow-auto mt-3 mx-auto">
 				{characters?.map((character, index) => {
-					return <Card key={character.uid} category={"characters"} name={character.name} uid={character.uid} />
+					return <Card key={character.uid} type={"characters"} name={character.name} uid={character.uid} />
 				})}
 			</div>
 
 			<h2>Planets</h2>
 			<div className="d-flex col-10 overflow-auto mt-3 mx-auto">
 				{planets?.map((planet, index) => {
-					return <Card key={planet.uid} category={"planets"} name={planet.name} uid={planet.uid} />
+					return <Card key={planet.uid} type={"planets"} name={planet.name} uid={planet.uid} />
 				})}
 			</div>
 
 			<h2>Vehicles</h2>
 			<div className="d-flex col-10 overflow-auto mt-3 mx-auto">
 				{vehicles?.map((vehicle, index) => {
-					return <Card key={vehicle.uid} category={"vehicles"} name={vehicle.name} uid={vehicle.uid} />
+					return <Card key={vehicle.uid} type={"vehicles"} name={vehicle.name} uid={vehicle.uid} />
 				})}
 			</div>
 
