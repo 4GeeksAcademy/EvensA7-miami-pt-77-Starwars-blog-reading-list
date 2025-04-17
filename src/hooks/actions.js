@@ -21,3 +21,15 @@ export const getPlanets = async (dispatch) => {
     })
 
 }
+
+export const getVehicles = async (dispatch) => {
+    let response = await fetch ("https://www.swapi.tech/api/vehicles")
+    let data = await response.json();
+
+    dispatch({
+        type: "add_vehicles",
+        payload: data.results
+
+    })
+
+}

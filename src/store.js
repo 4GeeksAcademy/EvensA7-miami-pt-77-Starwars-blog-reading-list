@@ -24,6 +24,13 @@ export default function storeReducer(store, action = {}) {
                 planets: action.payload
             };
 
+        case 'add_vehicles':
+
+            return {
+                ...store,
+                vehicles: action.payload
+            };
+
         case 'toggle_favorites':
             let name = action.payload
 
