@@ -16,7 +16,7 @@ export const Card = (props) => {
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
                 <button className="btn" onClick={(e)=> handleFavs(e)}>heart icon</button>
-                <Link to={`/characters/${props.uid}`} className="btn btn-danger"></Link>
+                <Link to={`/${props.type}/${props.uid}`} className="btn btn-danger"></Link>
             </div>
         </div>
 

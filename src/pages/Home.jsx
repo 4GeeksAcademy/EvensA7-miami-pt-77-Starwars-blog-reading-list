@@ -35,14 +35,14 @@ export const Home = () => {
 			<h2>Characters</h2>
 			<div className="d-flex col-10 overflow-auto mt-3 mx-auto">
 				{characters?.map((character, index) => {
-					return <Card key={character.uid} type={"character"} name={character.name} uid={character.uid} />
+					return <Card key={character.uid} type={"characters"} name={character.name} uid={character.uid} />
 				})}
 			</div>
 
 			<h2>Planets</h2>
 			<div className="d-flex col-10 overflow-auto mt-3 mx-auto">
 				{planets?.map((planet, index) => {
-					return <Card key={planet.uid} type={"planet"} name={planet.name} uid={planet.uid} />
+					return <Card key={planet.uid} type={"planets"} name={planet.name} uid={planet.uid} />
 				})}
 			</div>
 		</div>

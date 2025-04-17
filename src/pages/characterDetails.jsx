@@ -12,7 +12,7 @@ export const CharacterDetails = () => {
     }, [])
 
     const getEachCharacter = async () => {
-        let response = await fetch ("https://www.swapi.tech/api/people" + uid)
+        let response = await fetch ("https://www.swapi.tech/api/people/" + uid)
         let data = await response.json();
         setCharacter(data.result.properties);
         
@@ -21,13 +21,13 @@ export const CharacterDetails = () => {
     return (
         <div className="text-center mt-5">
             <h1>Name:</h1>
-            <h3>{character.name}</h3>
+            <h3>{character?.name}</h3>
 
             <h1>Eye Color</h1>
-            <h3>{character.eye_color}</h3>
+            <h3>{character?.eye_color}</h3>
 
             <h1>Birth Year</h1>
-            <h3>{character.birth_year}</h3>
+            <h3>{character?.birth_year}</h3>
 
         </div>
 
